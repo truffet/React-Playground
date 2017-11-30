@@ -1,10 +1,15 @@
 import React, {Component} from 'react'
+import {Switch, Route} from 'react-router-dom'
+
+import Home from '../Home'
 
 class Core extends Component {
   render () {
     return (
       <div>
-        Router..
+        <Switch>
+          <Route exact path='/' component={Home}/>
+        </Switch>
       </div>
     )
   }
