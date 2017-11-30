@@ -1,16 +1,17 @@
-import React, {Component} from 'react'
-import {Route, Switch} from 'react-router-dom'
+// the app container sets the main layout for the app
 
+import React, {Component} from 'react'
+
+import Core from '../../Core'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Router from '../../Router'
 
 class App extends Component {
   render () {
     return (
       <div>
         <Header/>
-        <Router/>
+        <Core/>
         <Footer/>
       </div>
     )

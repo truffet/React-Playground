@@ -12,7 +12,7 @@ var config = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
 
@@ -24,4 +24,3 @@ var config = {
   }
 }
 module.exports = config;
-

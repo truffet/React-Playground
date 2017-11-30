@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 
-class Router extends Component {
+class Core extends Component {
   render () {
-    render (
+    return (
       <div>
         Router..
       </div>
     )
   }
 }
+
+export default Core
