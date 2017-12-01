@@ -4,6 +4,7 @@ import {addCrypto} from '../../../actions/actions'
 
 import AddCrypto from '../components/AddCrypto'
 import CryptoList from '../components/CryptoList'
+import Header2 from '../../../components/Header2'
 
 class Home extends Component {
   render () {
@@ -12,6 +13,7 @@ class Home extends Component {
 
     return (
       <div>
+        <Header2 title="Add one by one your favorite crypto :"/>
         <AddCrypto onAddClick={cryptoName => dispatch(addCrypto(cryptoName))}/>
         <CryptoList cryptolist={visibleCryptos}/>
       </div>
