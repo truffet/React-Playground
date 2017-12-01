@@ -1,11 +1,11 @@
-export const ADD_TODO = 'ADD_TODO'
+export const ADD_CRYPTO = 'ADD_CRYPTO'
 
-let n = 0;
+let nextCryptoId = 0;
 
-export function addTodo(text) {
+export function addCrypto(cryptoName) {
   return {
-    type: ADD_TODO,
-    id: n++,
-    text
-  };
+    type: ADD_CRYPTO,
+    id: nextCryptoId++,
+    cryptoName
+  }
 }

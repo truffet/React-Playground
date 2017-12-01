@@ -1,33 +1,36 @@
 import {combineReducers} from 'redux'
-import {ADD_TODO} from '../actions/actions'
+import {ADD_CRYPTO} from '../actions/actions'
 
-function todo(state, action) {
-  switch (action.type) {
+function crypto(state, action) {
+  switch(action.type) {
 
-    case ADD_TODO:
+    case ADD_CRYPTO:
       return {
         id: action.id,
-        text: action.text,
+        cryptoName: action.cryptoName
       }
+
     default:
-    return state
+      return state
   }
 }
 
-function todos(state = [], action) {
-  switch (action.type) {
-    case ADD_TODO:
+function cryptoList(state=[], action) {
+  switch(action.type) {
+
+    case ADD_CRYPTO:
       return [
         ...state,
-        todo(undefined, action)
+        crypto(undefined, action)
       ]
+
     default:
-    return state
+      return state
   }
 }
 
-const todoApp = combineReducers({
-  todos
+const cryptoApp = combineReducers({
+  cryptoList
 })
 
-export default todoApp
+export default cryptoApp
