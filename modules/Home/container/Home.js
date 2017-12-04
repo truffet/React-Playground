@@ -13,7 +13,7 @@ class Home extends Component {
 
     return (
       <div>
-        <Header2 title="Add one by one your favorite crypto :"/>
+        <Header2 title="Add one by one your favorite cryptocurrencies :"/>
         <AddCrypto onAddClick={cryptoName => dispatch(addCrypto(cryptoName))}/>
         <CryptoList cryptolist={visibleCryptos}/>
       </div>
